@@ -1,0 +1,11 @@
+global:
+  scrape_interval: 5s
+
+scrape_configs:
+  - job_name: "inventory-service"
+    static_configs:
+      - targets: ["inventory:9464"]
+
+  - job_name: "order-service"
+    static_configs:
+      - targets: ["order:9465"]
